@@ -1,5 +1,6 @@
 .Menu {
     width: 100px;
+    z-index: 1;
     height: auto;
     border-radius: 6px;
     border: 1px solid whitesmoke;
@@ -7,7 +8,8 @@
     position: absolute;
     background-color: #212529;
     top: 5.3rem;
-    right: 3rem;
+    right: 2.6rem;
+    transition: 0.5;
   }
   .Menu ul {
     list-style: none;

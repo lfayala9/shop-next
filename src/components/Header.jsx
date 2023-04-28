@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import style from "../styles/Header.module.scss";
 import logo from "../assets/icons/basket-fill.svg";
 import menu from "../assets/icons/list.svg";
@@ -8,14 +8,28 @@ import cart from "../assets/icons/cart-fill.svg";
 import Menu from "./Menu";
 
 const Header = () => {
-
   const [toggle, setToggle] = useState(false);
   const handleToggle = () => {
     setToggle(!toggle);
   };
 
+  const ref = useRef();
+
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      if (toggle && ref.current && !ref.current.contains(e.target)) {
+        setToggle(false);
+      }
+    };
+
+    document.addEventListener("mousedown", checkIfClickedOutside);
+    return () => {
+      document.removeEventListener("mousedown", checkIfClickedOutside);
+    };
+  }, [toggle]);
+
   return (
-    <header className="bg-dark py-3 shadow-lg mb-0">
+    <header className="bg-dark py-3 shadow-lg mb-0" ref={ref}>
       <div className="container">
         <div className="d-flex align-items-center justify-content-between justify-content-lg-start">
           <Image src={menu} alt="menu" className="mini-menu d-md-none" />
@@ -49,9 +63,14 @@ const Header = () => {
           </ul>
           <span className={style["shopping-cart"]}>
             <Image className="mx-1 mx-md-5" src={cart} alt="cart" />
-          </span >
+          </span>
           <span className={style["user-icon"]}>
-            <Image onClick={handleToggle} className="mx-1" src={user} alt="user" />
+            <Image
+              onClick={()=> setToggle(oldState => !oldState)}
+              className="mx-1"
+              src={user}
+              alt="user"
+            />
           </span>
         </div>
       </div>

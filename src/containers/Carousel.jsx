@@ -33,8 +33,8 @@ const Carousel = () => {
   console.log(sampleImages);
   return (
     <section className="slideshow_main d-flex justify-content-end row">
-      <div style={{backgroundColor: '#51557E'}} className="col-4 d-flex align-items-start flex-column">
-        <h1 className="py-4 ps-5">
+      <div style={{background: 'linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%)'}} className="col-lg-4 d-lg-flex d-none align-items-start flex-column">
+        <h1 className="py-4 ps-5 text-white">
           This is the{" "}
           <strong className={style["color_text"]}>Fake Store</strong> experience
         </h1>
@@ -43,12 +43,12 @@ const Carousel = () => {
           <Image src={globe2} alt="globe2" className="mx-5" />
           <Image src={globe3} alt="globe3" className="mx-5" />
         </div>
-        <h1 className="py-3 mt-auto ps-5">
+        <h1 className="py-3 mt-auto ps-5 text-white">
           Be <strong className={style["color_text"]}>shocked</strong> with
           our prices
         </h1>
       </div>
-      <div id="carouselExampleCaptions" className="carousel slide col-8 px-0">
+      <div id="carouselExampleCaptions" className="carousel slide col-12 col-lg-8 px-0">
         <div className="carousel-indicators">
           <button
             type="button"
@@ -77,6 +77,10 @@ const Carousel = () => {
             aria-label="Slide 4"
           ></button>
         </div>
+        <h1 className="py-4 ps-5 text-dark d-lg-none bg-maroon">
+          This is the{" "}
+          <strong className={style["color_text"]}>Fake Store</strong> experience
+        </h1>
         <div className="carousel-inner">
           <div className="carousel-item active">
             <Image
@@ -86,7 +90,7 @@ const Carousel = () => {
               className="d-block w-100 opacity-75"
               alt="Running Shoes"
             />
-            <div className="carousel-caption d-none d-md-block">
+            <div className="carousel-caption">
               <h4 className="text-dark fw-bold">Running Shoes</h4>
               <p className="text-dark">
                 Get Them for only{" "}
@@ -105,7 +109,7 @@ const Carousel = () => {
                 className="d-block w-100 opacity-75"
                 alt={slide.title}
               />
-              <div className="carousel-caption d-none d-md-block">
+              <div className="carousel-caption">
                 <h4 className="text-dark fw-bold">{slide.title}</h4>
                 <p className="text-dark">
                   Get it for only{" "}
