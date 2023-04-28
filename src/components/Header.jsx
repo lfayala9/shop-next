@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-dark py-3">
+    <header className="bg-dark py-3 shadow-lg mb-0">
       <div className="container">
         <div className="d-flex align-items-center justify-content-between justify-content-lg-start">
           <Image src={menu} alt="menu" className="mini-menu d-md-none" />
@@ -25,7 +25,7 @@ const Header = () => {
               Fake <br /> Store
             </h5>
           </div>
-          <ul className="mx-5 nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <ul className="d-none d-md-flex mx-5 nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li>
               <a href="#" className={style["nav-text"]}>
                 Home
@@ -48,7 +48,7 @@ const Header = () => {
             </li>
           </ul>
           <span className={style["shopping-cart"]}>
-            <Image className="mx-5" src={cart} alt="cart" />
+            <Image className="mx-1 mx-md-5" src={cart} alt="cart" />
           </span >
           <span className={style["user-icon"]}>
             <Image onClick={handleToggle} className="mx-1" src={user} alt="user" />
