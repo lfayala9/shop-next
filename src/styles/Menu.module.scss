@@ -1,44 +1,32 @@
+@import '__vars';
 .Menu {
-    width: 100px;
-    z-index: 1;
-    height: auto;
-    border-radius: 6px;
-    border: 1px solid whitesmoke;
-    padding: 20px 20px 0 20px;
-    position: absolute;
-    background-color: #212529;
-    top: 5.3rem;
-    right: 2.6rem;
-    transition: 0.5;
-  }
-  .Menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .Menu ul li:nth-child(1),
-  .Menu ul li:nth-child(2) {
+  width: 10rem;
+  height: auto;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 20px 20px 0 20px;
+  position: absolute;
+  background-color: $--dark;
+  top: 5rem;
+  right: 5.5rem;
+  z-index: 1000;
+  transition: swipeDown 0.26s ease;
+}
+  .primary-button {
+    background-image: $--pink-gradient;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    width: 100%;
+    cursor: pointer;
     font-weight: bold;
-  }
-  .Menu ul li:last-child {
-    padding-top: 20px;
-    border-top: 1px solid var(--very-light-pink);
-  }
-  .Menu ul li:last-child a {
-    color: rgb(189, 62, 62);
-    font-size: var(--sm);
-  }
-  .Menu ul li a {
-    color: whitesmoke;
-    text-decoration: none;
-    margin-bottom: 20px;
-    display: inline-block;
+    height: 50px;
   }
 
-@media (max-width: 640px) {
-    .Menu{
-      position: absolute;
-      right: 0;
-    }
+  .primary-button:hover{
+    background-image: $--reverse-gradient;
+  }
+
+// @media (max-width: 640px) {
     
-}
+// }

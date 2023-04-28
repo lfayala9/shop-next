@@ -2,21 +2,19 @@ import Link from "next/link";
 import style from "../styles/Menu.module.scss"
 const Menu = () => {
     return (
-      <div className={style.Menu}>
-        <ul>
-          <li>
-            <Link href="/" className="title">
-              My orders
+        <div  className={style["Menu"]}>
+          <ul className="p-0">
+            <li>
+            <Link href="/sign-in">
+              <button className={style['primary-button']}>Sign In</button>
             </Link>
-          </li>
-          <li>
-            <Link href="/">My account</Link>
-          </li>
-          <li>
-            <Link href="/">Sign out</Link>
-          </li>
-        </ul>
-      </div>
+            </li>
+            <hr className="text-white"/>
+            <li className="px-3">
+              <Link className="text-decoration-none text-white" href="/">Log In</Link>
+            </li>
+          </ul>
+        </div>
     );
   };
 

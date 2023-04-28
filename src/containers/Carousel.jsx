@@ -30,7 +30,6 @@ const Carousel = () => {
     },
   ];
 
-  console.log(sampleImages);
   return (
     <section className="slideshow_main d-flex justify-content-end row">
       <div style={{background: 'linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%)'}} className="col-lg-4 d-lg-flex d-none align-items-start flex-column">
