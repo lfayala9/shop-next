@@ -36,7 +36,7 @@ const Header = () => {
               Fake <br /> Store
             </h5>
           </div>
-          <ul className="d-none d-md-flex mx-5 nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <ul className="d-none d-lg-flex mx-5 nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li>
               <a href="#" className={style["nav-text"]}>
                 Home

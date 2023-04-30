@@ -10,7 +10,6 @@
   top: 5rem;
   right: 5.5rem;
   z-index: 1000;
-  transition: swipeDown 0.26s ease;
 }
   .primary-button {
     background-image: $--pink-gradient;
@@ -24,9 +23,19 @@
   }
 
   .primary-button:hover{
-    background-image: $--reverse-gradient;
+    transition: 0.85s;
+    border: solid 13px;
+    border-radius: 8px;
+    border-image: $--pink-gradient border-box;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
   }
 
-// @media (max-width: 640px) {
-    
-// }
+@media (max-width: 640px) {
+  .Menu{
+    position: absolute;
+    right: 0;
+  } 
+}
