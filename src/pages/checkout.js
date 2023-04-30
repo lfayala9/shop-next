@@ -1,5 +1,13 @@
+import Layout from "@/containers/Layout";
+
 const Checkout = () => {
-  return <h1>Checkout</h1>;
+  return (
+    <Layout authPage={true}>
+      <div>
+        <h1>Checkout</h1>
+      </div>
+    </Layout>
+  );
 };
 
 export default Checkout;

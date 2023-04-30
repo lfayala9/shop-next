@@ -1,4 +1,41 @@
 $--pink-gradient: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 $--reverse-gradient: linear-gradient(43deg, #FFCC70 0%, #C850C0 46%, #4158D0 100%);
-$--dark: #212529
+$--dark: #212529;
+@mixin dropdow{
+  background-color: $--dark;
+  height: auto;
+  border: 1px solid white;
+  border-radius: 1rem;
+  padding: 1.3rem 1.3rem 0 1.3rem;
+}
+@mixin gradient{
+    background-image: $--pink-gradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 
+@mixin button{
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    height: 3.5rem;
+    border-radius: 8px;
+    border: none;
+    color: white;
+}
+.primary-button {
+    background-image: $--pink-gradient;
+    @include button()
+  }
+
+  .primary-button:hover{
+    transition: 0.85s;
+    border: solid 13px;
+    border-radius: 8px;
+    border-image: $--pink-gradient border-box;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+  }

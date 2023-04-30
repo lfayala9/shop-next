@@ -4,29 +4,44 @@ import logo from "../assets/icons/basket-fill.svg";
 import menu from "../assets/icons/list.svg";
 import user from "../assets/icons/person-circle.svg";
 import cart from "../assets/icons/cart-fill.svg";
+import Orders from "@/containers/Orders";
 import Menu from "./Menu";
 import { useState, useEffect, useRef } from "react";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
+  const [toggleOrders, setToggleOrders] = useState(false);
 
-  let ref = useRef();
+  let menuRef = useRef();
+  let ordersRef = useRef();
 
   useEffect(() => {
+    let handleOrders = (e) => {
+      if (!ordersRef.current.contains(e.target)) {
+        setToggleOrders(false);
+      }
+    };
+    document.addEventListener("mousedown", handleOrders);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOrders);
+    };
+  },);
+  
+  useEffect(() => {
     let handleClose = (e) => {
-      if (!ref.current.contains(e.target)) {
+      if (!menuRef.current.contains(e.target)) {
         setToggle(false);
       }
     };
-
     document.addEventListener("mousedown", handleClose);
 
     return () => {
       document.removeEventListener("mousedown", handleClose);
     };
-  });
+  },);
   return (
-    <header className="bg-dark py-3 shadow-lg mb-0">
+    <header className="bg-dark py-3 shadow-lg mb-0 z-3 fixed-top">
       <div className="container">
         <div className="d-flex align-items-center justify-content-between justify-content-lg-start">
           <Image src={menu} alt="menu" className="mini-menu d-md-none" />
@@ -58,12 +73,9 @@ const Header = () => {
               </a>
             </li>
           </ul>
-          <span className={style["shopping-cart"]}>
-            <Image className="mx-1 mx-md-5" src={cart} alt="cart" />
-          </span>
-          <div ref={ref} className={style["user-icon"]}>
+          <div ref={menuRef} className={style["user-icon"]}>
             <Image
-              className="mx-1"
+              className="mx-1 mx-md-5"
               onClick={() => setToggle(!toggle)}
               // type="button" data-bs-toggle="dropdown" aria-expanded="false"
               src={user}
@@ -73,6 +85,10 @@ const Header = () => {
             {toggle && <Menu />}
             {/* <Menu /> */}
           </div>
+          <div ref={ordersRef} className={style["shopping-cart"]}>
+            <Image onClick={() => setToggleOrders(!toggleOrders)} className="mx-1" src={cart} alt="cart" />
+          </div>
+          {toggleOrders && <Orders toggleOrders={toggleOrders} setToggleOrders={setToggleOrders} />}
         </div>
       </div>
       <hr className="text-white mt-3 mb-0" />

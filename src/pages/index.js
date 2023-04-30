@@ -1,12 +1,12 @@
-import styles from '@/styles/Home.module.css'
-import Menu from '@/components/Menu';
-import Carousel from '@/containers/Carousel';
+import styles from "@/styles/Home.module.css";
+import Carousel from "@/containers/Carousel";
+import Layout from "@/containers/Layout";
 
 export default function Home() {
   return (
-    <>
-    <Carousel />
-    <h1>Home</h1>
-    </>
-  )
+    <Layout>
+      <Carousel />
+      <h1>Home</h1>
+    </Layout>
+  );
 }

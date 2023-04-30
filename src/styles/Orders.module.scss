@@ -1,0 +1,93 @@
+@import '__vars';
+
+.orders_container{
+    @include dropdow();
+    width: 23rem;
+    max-height: 90vh;
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+    padding-bottom: 1.5rem;
+    z-index: 1030;
+    overflow-y: auto;
+    animation: swipeLeft 0.2s linear;
+
+}
+
+.order_total{
+    //  p-3 d-flex bg-light mb-3 rounded-2
+    display: flex;
+    padding: 1.25rem;
+    background-color: rgb(82, 82, 82);
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    color: white;
+}
+
+@keyframes swipeLeft {
+  0% {
+    width: 0rem;
+    height: 4rem;
+    font-size: 2px;
+  }
+
+  25%{
+    width: 9rem;
+    height: 5rem;
+    font-size: 3px;
+  }
+
+  50%{
+    width: 13rem;
+    height: 11.5rem;
+    font-size: 5px;
+  }
+
+  75%{
+    width: 19.5rem;
+    height: 13.8rem;
+    font-size: 6px;
+  }
+
+  100% {
+    width: 23rem;
+  }
+}
+
+@media (max-width: 640px) {
+    .orders_container{
+      position: fixed;
+      width: 16rem;
+      right: 1rem;
+    } 
+
+    @keyframes swipeLeft {
+      0% {
+        width: 0rem;
+        height: 4rem;
+        font-size: 2px;
+      }
+  
+      25%{
+        width: 2rem;
+        height: 5rem;
+        font-size: 3px;
+      }
+  
+      50%{
+        width: 7rem;
+        height: 11.5rem;
+        font-size: 5px;
+      }
+  
+      75%{
+        width: 10.5rem;
+        height: 13.8rem;
+        font-size: 6px;
+      }
+  
+      100% {
+        width: 16rem;
+      }
+    }
+  }

@@ -1,41 +1,27 @@
 @import '__vars';
 .Menu {
+  @include dropdow();
+  position: fixed;
   width: 10rem;
-  height: auto;
-  border: 1px solid white;
-  border-radius: 6px;
-  padding: 20px 20px 0 20px;
-  position: absolute;
-  background-color: $--dark;
   top: 5rem;
-  right: 5.5rem;
-  z-index: 1000;
+  right: 12rem;
+  z-index: 1060;
+  animation: swipeLeft 0.16s linear;
 }
-  .primary-button {
-    background-image: $--pink-gradient;
-    border-radius: 8px;
-    border: none;
-    color: white;
-    width: 100%;
-    cursor: pointer;
-    font-weight: bold;
-    height: 50px;
-  }
-
-  .primary-button:hover{
-    transition: 0.85s;
-    border: solid 13px;
-    border-radius: 8px;
-    border-image: $--pink-gradient border-box;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-
-  }
 
 @media (max-width: 640px) {
   .Menu{
-    position: absolute;
-    right: 0;
+    position: fixed;
+    right: 5rem;
   } 
+}
+
+@keyframes swipeLeft {
+  0% {
+    width: 5rem;
+    font-size: 2px;
+  }
+  100% {
+    width: 10rem;
+  }
 }
