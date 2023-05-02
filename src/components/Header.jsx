@@ -6,6 +6,7 @@ import user from "../assets/icons/person-circle.svg";
 import cart from "../assets/icons/cart-fill.svg";
 import Orders from "@/containers/Orders";
 import Menu from "./Menu";
+import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 
 const Header = () => {
@@ -42,8 +43,8 @@ const Header = () => {
   },);
   return (
     <header className="bg-dark py-3 shadow-lg mb-0 z-3 fixed-top">
-      <div className="container">
-        <div className="d-flex align-items-center justify-content-between justify-content-lg-start">
+      <div className="nav_container mx-5">
+        <div className="d-flex align-items-center justify-content-between">
           <Image src={menu} alt="menu" className="mini-menu d-md-none" />
           <div className="logo-container d-flex mx-md-0 mx-5">
             <Image src={logo} alt="logo" className={style["nav-logo"]} />
@@ -53,7 +54,7 @@ const Header = () => {
           </div>
           <ul className="d-none d-lg-flex mx-5 nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li>
-              <a href="#" className={style["nav-text"]}>
+              <a href="#home" className={style["nav-text"]}>
                 Home
               </a>
             </li>
@@ -75,23 +76,20 @@ const Header = () => {
           </ul>
           <div ref={menuRef} className={style["user-icon"]}>
             <Image
-              className="mx-1 mx-md-5"
+              className={style["menu_logo"]}
               onClick={() => setToggle(!toggle)}
-              // type="button" data-bs-toggle="dropdown" aria-expanded="false"
               src={user}
               alt="user"
-              // dropdown-toggle
             />
-            {toggle && <Menu />}
-            {/* <Menu /> */}
           </div>
           <div ref={ordersRef} className={style["shopping-cart"]}>
-            <Image onClick={() => setToggleOrders(!toggleOrders)} className="mx-1" src={cart} alt="cart" />
+            <Image onClick={() => setToggleOrders(!toggleOrders)} className={style["menu_logo"]} src={cart} alt="cart" />
           </div>
-          {toggleOrders && <Orders toggleOrders={toggleOrders} setToggleOrders={setToggleOrders} />}
         </div>
       </div>
       <hr className="text-white mt-3 mb-0" />
+      {toggleOrders && <Orders toggleOrders={toggleOrders} setToggleOrders={setToggleOrders} />}
+      {toggle && <Menu />}
     </header>
   );
 };

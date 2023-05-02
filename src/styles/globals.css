@@ -1,4 +1,22 @@
 *{
     overflow-x: hidden;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
+}
+/* html{
+    display: flex;
+    justify-content: center;
+}
+header{
+    max-width: 1366px;
+}
+body{
+    max-width: 1366px;
+    display: flex;
+    justify-content: center;
+
+} */
+
+
+@media (min-width: 2561px){
+    * {font-size: 1.5rem;}
 }

@@ -4,3 +4,35 @@
     @include gradient();
     font-weight: bold;
 }
+
+.discount_tag{
+    background-color: #c5ff8f;
+    margin-bottom: 0;
+    padding: 0.6rem 10rem 0.6rem 10rem;
+    font-size: 0.85rem;
+}
+.close_x{
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.icon_menu{
+    margin: 0rem 2rem 0rem 2rem;
+
+}
+
+@media (max-width: 640px){
+    .discount_tag{
+        padding: 1rem 1rem 1rem 2.5rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 2561px){
+    .color_text {font-size: 2.3rem;}
+    .icon_menu{
+        width: 4rem;
+        height: 4rem;
+        margin: 0rem 2rem 0rem 2rem;
+    }
+}

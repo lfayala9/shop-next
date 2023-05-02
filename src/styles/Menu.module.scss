@@ -4,8 +4,8 @@
   position: fixed;
   width: 10rem;
   top: 5rem;
-  right: 12rem;
-  z-index: 1060;
+  right: 8rem;
+  z-index: 1080;
   animation: swipeLeft 0.16s linear;
 }
 
@@ -23,5 +23,38 @@
   }
   100% {
     width: 10rem;
+  }
+}
+@media (min-width: 2561px){
+  .Menu{width: 15rem;}
+
+  @keyframes swipeLeft {
+    0% {
+      width: 0rem;
+      height: 2rem;
+      font-size: 2px;
+    }
+  
+    25%{
+      width: 3rem;
+      height: 3rem;
+      font-size: 3px;
+    }
+  
+    50%{
+      width: 7rem;
+      height: 5rem;
+      font-size: 5px;
+    }
+  
+    75%{
+      width: 10.5rem;
+      height: 5.5rem;
+      font-size: 6px;
+    }
+  
+    100% {
+      width: 14rem;
+    }
   }
 }
