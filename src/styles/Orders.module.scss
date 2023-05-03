@@ -91,3 +91,24 @@
       }
     }
   }
+
+  @media (min-width: 2541px){
+    .orders_container{
+      position: fixed;
+      right: 45.4rem;
+    }
+  }
+
+  @media (min-width: 3839px){
+    .orders_container{
+      position: fixed;
+      right: 91rem;
+    }
+  }
+
+  @media (min-width: 4000px){
+    .orders_container{
+      position: fixed;
+      right: 100rem;
+    }
+  }

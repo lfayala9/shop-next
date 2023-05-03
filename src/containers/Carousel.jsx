@@ -1,12 +1,12 @@
 import Image from "next/image";
 import style from "../styles/Carousel.module.scss";
 import shoes from "../assets/sample images/shoes2.jpg";
-import nintendo from "../assets/sample images/xbox.jpg";
+import nintendo from "../assets/sample images/xbox3.jpg";
 import x from "../assets/icons/x.svg"
 import coffee from "../assets/sample images/coffee2.jpg";
 import laptop from "../assets/sample images/laptop.jpg";
 import globe1 from "../assets/icons/globe-americas.svg";
-import globe2 from "../assets/icons/globe-asia-australia.svg";
+import globe2 from "../assets/icons/truck.svg";
 import globe3 from "../assets/icons/globe-europe-africa.svg";
 import { useState } from "react";
 
@@ -17,7 +17,7 @@ const Carousel = () => {
   const sampleImages = [
     {
       id: 2,
-      title: "Xbox Series X",
+      title: "Xbox Series X|S",
       image: nintendo,
       price: "399.99",
     },
@@ -29,18 +29,18 @@ const Carousel = () => {
     },
     {
       id: 4,
-      title: "Laptop Asus",
+      title: "Asus Zenbook S",
       image: laptop,
       price: "449.99",
     },
   ];
 
   return (
-    <section className="slideshow_main d-flex justify-content-end row mt-5 pt-5">
+    <section className="slideshow_main d-flex justify-content-end row mt-5 pt-4 mb-1">
       <div style={{background: 'linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%)'}} className="col-lg-4 d-lg-flex d-none align-items-start flex-column">
-        <h1 className="py-4 ps-5 text-white">
-          This is the{" "}
-          <strong className={style["color_text"]}>Fake Store</strong> experience
+        <h1 className="py-4 ps-5 text-white pt-5">
+          <span className={style["car_text"]}>This is the{" "}
+          <strong className={style["color_text"]}>Fake Store</strong> experience</span>
         </h1>
         <div className="icons-container d-flex mt-auto w-100 justify-content-between">
           <Image src={globe1} alt="globe1" className={style["icon_menu"]} />
@@ -52,7 +52,7 @@ const Carousel = () => {
           our prices
         </h1>
       </div>
-      <div id="carouselExampleCaptions" className="carousel slide col-12 col-lg-8 px-0">
+      <div id="carouselExampleCaptions" className="carousel slide col-12 col-lg-8 px-1">
         {togglePop && <p className={style["discount_tag"]}>Get 25% off with <strong>FAKE25</strong> code | Free Shipping over 49$ <span onClick={()=> setTogglePop(false)} className={style["close_x"]}><Image src={x} alt='x' /></span> </p>}
         <div className="carousel-indicators">
           <button
@@ -98,8 +98,8 @@ const Carousel = () => {
               <h4 className="text-dark fw-bold overflow-hidden">Running Shoes</h4>
               <p className="text-dark overflow-hidden">
                 Get Them for only{" "}
-                <span className="p-1 bg-black bg-gradient">
-                  <strong className={style["color_text"]}>$59.99</strong>
+                <span className="p-2 bg-black bg-gradient">
+                  <strong className={style["color_text2"]}>$59.99</strong>
                 </span>
               </p>
             </div>
@@ -117,8 +117,8 @@ const Carousel = () => {
                 <h4 className="text-dark fw-bold overflow-hidden">{slide.title}</h4>
                 <p className="text-dark overflow-hidden">
                   Get it for only{" "}
-                  <span className="bg-black bg-gradient p-1">
-                    <strong className={style["color_text"]}>
+                  <span className="bg-black bg-gradient p-2">
+                    <strong className={style["color_text2"]}>
                       ${slide.price}
                     </strong>
                   </span>

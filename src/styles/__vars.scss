@@ -9,33 +9,44 @@ $--dark: #212529;
   padding: 1.3rem 1.3rem 0 1.3rem;
 }
 @mixin gradient{
-    background-image: $--pink-gradient;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  background-image: $--pink-gradient;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 @mixin button{
-    width: 100%;
-    cursor: pointer;
-    font-weight: bold;
-    height: 3.5rem;
-    border-radius: 8px;
-    border: none;
-    color: white;
+  width: 100%;
+  cursor: pointer;
+  font-weight: bold;
+  height: 3.5rem;
+  border-radius: 8px;
+  border: none;
+  color: white;
 }
 .primary-button {
-    background-image: $--pink-gradient;
-    @include button()
+  background-image: $--pink-gradient;
+  @include button()
   }
 
-  .primary-button:hover{
-    transition: 0.85s;
-    border: solid 13px;
-    border-radius: 8px;
-    border-image: $--pink-gradient border-box;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+.primary-button:hover{
+  transition: 0.85s;
+  border: solid 13px;
+  border-radius: 8px;
+  border-image: $--pink-gradient border-box;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 
   }
+
+.color_text{
+  @include gradient();
+  font-weight: bold;
+}
+
+.icon_menu{
+  margin: 0rem 2rem 0rem 2rem;
+  width: 8rem;
+  height: 8rem;
+}

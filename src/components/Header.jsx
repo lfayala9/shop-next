@@ -27,8 +27,8 @@ const Header = () => {
     return () => {
       document.removeEventListener("mousedown", handleOrders);
     };
-  },);
-  
+  });
+
   useEffect(() => {
     let handleClose = (e) => {
       if (!menuRef.current.contains(e.target)) {
@@ -40,57 +40,71 @@ const Header = () => {
     return () => {
       document.removeEventListener("mousedown", handleClose);
     };
-  },);
+  });
   return (
-    <header className="bg-dark py-3 shadow-lg mb-0 z-3 fixed-top">
-      <div className="nav_container mx-5">
-        <div className="d-flex align-items-center justify-content-between">
-          <Image src={menu} alt="menu" className="mini-menu d-md-none" />
-          <div className="logo-container d-flex mx-md-0 mx-5">
-            <Image src={logo} alt="logo" className={style["nav-logo"]} />
-            <h5 className={style["title"]}>
-              Fake <br /> Store
-            </h5>
-          </div>
-          <ul className="d-none d-lg-flex mx-5 nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li>
-              <a href="#home" className={style["nav-text"]}>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className={style["nav-text"]}>
-                Products
-              </a>
-            </li>
-            <li>
-              <a href="#" className={style["nav-text"]}>
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="#" className={style["nav-text"]}>
-                Contact
-              </a>
-            </li>
-          </ul>
-          <div ref={menuRef} className={style["user-icon"]}>
-            <Image
-              className={style["menu_logo"]}
-              onClick={() => setToggle(!toggle)}
-              src={user}
-              alt="user"
-            />
-          </div>
-          <div ref={ordersRef} className={style["shopping-cart"]}>
-            <Image onClick={() => setToggleOrders(!toggleOrders)} className={style["menu_logo"]} src={cart} alt="cart" />
+    <>
+      <header className="bg-dark py-3 shadow-lg mb-0">
+        <div className="nav_container mx-5">
+          <div className="d-flex align-items-center justify-content-between">
+            <Image src={menu} alt="menu" className="mini-menu d-md-none" />
+            <div className="logo-container d-flex mx-md-0 mx-5">
+              <Image src={logo} alt="logo" className={style["nav-logo"]} />
+              <h5 className={style["title"]}>
+                Fake <br /> Store
+              </h5>
+            </div>
+            <ul className="d-none d-lg-flex mx-5 nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li>
+                <a href="#home" className={style["nav-text"]}>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" className={style["nav-text"]}>
+                  Products
+                </a>
+              </li>
+              <li>
+                <a href="#" className={style["nav-text"]}>
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#" className={style["nav-text"]}>
+                  Contact
+                </a>
+              </li>
+            </ul>
+            <div className={style["icons_cont"]}>
+              <div ref={menuRef} className={style["user-icon"]}>
+                <Image
+                  className={style["menu_logo"]}
+                  onClick={() => setToggle(!toggle)}
+                  src={user}
+                  alt="user"
+                />
+              </div>
+              <div ref={ordersRef} className={style["shopping-cart"]}>
+                <Image
+                  onClick={() => setToggleOrders(!toggleOrders)}
+                  className={style["menu_logo"]}
+                  src={cart}
+                  alt="cart"
+                />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <hr className="text-white mt-3 mb-0" />
-      {toggleOrders && <Orders toggleOrders={toggleOrders} setToggleOrders={setToggleOrders} />}
-      {toggle && <Menu />}
-    </header>
+        {toggleOrders && (
+          <Orders
+            toggleOrders={toggleOrders}
+            setToggleOrders={setToggleOrders}
+          />
+        )}
+        {toggle && <Menu />}
+      </header>
+      <hr className="text-white m-2 p-1" />
+    </>
   );
 };
 

@@ -1,0 +1,6 @@
+@import "__vars";
+
+.color_text{
+  @include gradient();
+  font-weight: bold;
+}

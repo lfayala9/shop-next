@@ -25,36 +25,22 @@
     width: 10rem;
   }
 }
-@media (min-width: 2561px){
-  .Menu{width: 15rem;}
+@media (min-width: 2541px){
+  .Menu{
+    position: fixed;
+    right: 49.5rem;
+  }
+}
 
-  @keyframes swipeLeft {
-    0% {
-      width: 0rem;
-      height: 2rem;
-      font-size: 2px;
-    }
-  
-    25%{
-      width: 3rem;
-      height: 3rem;
-      font-size: 3px;
-    }
-  
-    50%{
-      width: 7rem;
-      height: 5rem;
-      font-size: 5px;
-    }
-  
-    75%{
-      width: 10.5rem;
-      height: 5.5rem;
-      font-size: 6px;
-    }
-  
-    100% {
-      width: 14rem;
-    }
+@media (min-width: 3839px){
+  .Menu{
+    position: fixed;
+    right: 95.4rem;
+  }
+}
+@media (min-width: 4000px){
+  .Menu{
+    position: fixed;
+    right: 104rem;
   }
 }

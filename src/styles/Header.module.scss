@@ -26,10 +26,16 @@ header{
 
     .shopping-cart{
         cursor: pointer;
-        padding: 0rem 0rem 0rem 3.5rem;
+        padding: 0rem 0rem 0rem 0rem;
     }
     .user-icon{
         cursor: pointer
+    }
+    .icons_cont{
+        display: flex;
+        flex-direction: row;
+        gap: 3.5rem;
+        position: relative;
     }
     
 }
@@ -41,17 +47,17 @@ header{
     
 }
 
-@media (min-width: 2561px){
+@media (min-width: 2541px){
     .nav-logo{
-        width: 2.7rem;
-        height: 2.7rem;
+        width: 3rem;
+        height: 3rem;
     }
     .menu_logo{
-        height: 2.7rem;
-        width: 2.7rem;
+        height: 1.7rem;
+        width: 1.7rem;
     }
     .shopping-cart{
-        padding: 0rem 0rem 0rem 6.5rem;
+        padding: 0rem 0rem 0rem 0rem;
     }
     .nav-text{
         margin-left: 4rem;
