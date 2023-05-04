@@ -44,7 +44,7 @@ const Header = () => {
   return (
     <>
       <header className="bg-dark py-3 shadow-lg mb-0">
-        <div className="nav_container mx-5">
+        <div className="nav_container mx-2 mx-md-5">
           <div className="d-flex align-items-center justify-content-between">
             <Image src={menu} alt="menu" className="mini-menu d-md-none" />
             <div className="logo-container d-flex mx-md-0 mx-5">
@@ -91,6 +91,7 @@ const Header = () => {
                   src={cart}
                   alt="cart"
                 />
+                {/* <div className="text-white">3</div> */}
               </div>
             </div>
           </div>

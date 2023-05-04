@@ -14,7 +14,7 @@ function Hero() {
         className="opacity-75"
         src={office}
         alt="office"
-        style={{ width: "100%", height: "67vh", maxHeight: "527.25px"}}
+        style={{ width: "100%", height: "auto", maxHeight: "527.25px"}}
       />
       </div>
       <div className="col-lg-4 d-lg-flex d-none align-items-start flex-column" style={{background: "linear-gradient(315deg, #4c4177 0%, #2a5470 74%)"}}>

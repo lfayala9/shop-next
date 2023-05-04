@@ -1,5 +1,6 @@
 $--pink-gradient: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 $--reverse-gradient: linear-gradient(43deg, #FFCC70 0%, #C850C0 46%, #4158D0 100%);
+$--darker-gradient: linear-gradient(to right, #d82851, #ff4b2b);
 $--dark: #212529;
 @mixin dropdow{
   background-color: $--dark;
@@ -9,7 +10,6 @@ $--dark: #212529;
   padding: 1.3rem 1.3rem 0 1.3rem;
 }
 @mixin gradient{
-  background-image: $--pink-gradient;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -42,7 +42,13 @@ $--dark: #212529;
 
 .color_text{
   @include gradient();
+  background-image: $--pink-gradient;
   font-weight: bold;
+}
+
+.color_text3{
+  @include gradient();
+  background-image: $--pink-gradient;
 }
 
 .icon_menu{

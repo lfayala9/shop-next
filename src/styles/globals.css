@@ -3,6 +3,10 @@
     font-family: 'IBM Plex Mono', monospace;
 }
 
+.bi-bag{
+    color: white;
+}
+
 html{
     background-color: #130f40;
     background-image: linear-gradient(315deg,#000000  0%, #060514 74%);}

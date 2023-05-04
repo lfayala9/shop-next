@@ -1,0 +1,38 @@
+@import '__vars';
+
+.product_cont{
+    padding: 0.7rem;
+    margin: 3rem;
+    border-radius: 1rem;
+    background-color: $--dark;
+    max-width: 270px;
+    max-height: 470px;
+}
+
+.product_img{
+    border-radius: 1rem;
+}
+
+.product_info{
+    padding: 1rem 1rem 0.6rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bag_icon{
+    cursor: pointer;
+    padding: 0.9rem;
+    background-image: $--pink-gradient;
+    border-radius: 5rem;
+    margin-bottom: 0;
+}
+
+.bag_icon:hover{
+    transition: 2.85s;
+    background-image: $--reverse-gradient;
+}
+
+.product_info div{
+    width: 65%;
+}
