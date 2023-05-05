@@ -28,19 +28,20 @@ header{
 
     .shopping-cart{
         cursor: pointer;
-        padding: 0rem 1rem 0rem 0rem;
+        margin-left: 1rem;
+        padding: 0;
         position: relative;
     }
     .shopping-cart div{
         width: 15px;
         height: 15px;
-        background-color: green;
+        background-color: #C850C0;
         border-radius: 50%;
         font-size: 0.7rem;
         font-weight: bold;
         position: absolute;
         top:0px;
-        right: 10px;
+        right: 0px;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -1,6 +1,7 @@
 @import '__vars';
 .Menu {
   @include dropdow();
+  cursor:auto;
   position: fixed;
   width: 10rem;
   top: 5rem;

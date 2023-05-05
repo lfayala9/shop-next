@@ -1,5 +1,5 @@
 import Link from "next/link";
-import style from "../styles/Menu.module.scss"
+import style from "@styles/Menu.module.scss"
 const Menu = () => {
     return (
         <div  className={style["Menu"]}>

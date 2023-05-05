@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import office from "../assets/sample images/office.jpg";
-import style from "../styles/Hero.module.scss"
-import headset from "../assets/icons/headset.svg"
-import watch from "../assets/icons/watch.svg"
-import pc from "../assets/icons/pc-display.svg"
+import office from "@assets/sample images/office.jpg";
+import style from "@styles/Hero.module.scss"
+import headset from "@assets/icons/headset.svg"
+import watch from "@assets/icons/watch.svg"
+import pc from "@assets/icons/pc-display.svg"
 
 function Hero() {
   return (

@@ -1,0 +1,30 @@
+@import "__vars";
+
+
+.cont_orderItem {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: rgb(82, 82, 82);
+  border-radius: 1rem;
+}
+.cont_orderItem figure {
+  margin: 0;
+}
+.cont_orderItem figure img {
+  width: 70px;
+  height: 70px;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+.cont_orderItem p:nth-child(2) {
+  color: rgb(41, 40, 40);
+  font-size: small;
+}
+
+.cont_orderItem p:nth-child(3) {
+    font-weight: bold;
+  }

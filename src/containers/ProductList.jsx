@@ -1,7 +1,8 @@
-import Product from "@/components/Product";
-import useGetProducts from "@/hooks/useGetProducts";
+import Product from "@components/Product";
+import useGetProducts from "@hooks/useGetProducts";
 import React from "react";
-import style from "../styles/ProductList.module.scss"
+import style from "@styles/ProductList.module.scss"
+
 
 const API = 'https://fakestoreapi.com/products?offset=20&limit=12';
 
