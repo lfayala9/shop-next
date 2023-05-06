@@ -8,13 +8,20 @@
 .discount_tag{
     background-color: #c5ff8f;
     margin-bottom: 0;
-    padding: 0.4rem 10rem 0.4rem 10rem;
+    padding: 0.2rem 10rem 0.2rem 10rem;
     font-size: 0.85rem;
 }
 .close_x{
-    margin-left: 1rem;
+    background-color: rgb(20, 20, 20);
+    border-radius: 1rem;
+    margin-left: 0.8rem;
     cursor: pointer;
 }
+
+.close_x img{
+    padding-bottom: 0.2rem;
+}
+
 
 @media (max-width: 640px){
     .discount_tag{

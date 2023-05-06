@@ -13,10 +13,22 @@ const useInitialState = () => {
 			cart: [...state.cart, payload]
 		});
 	};
-    console.log(state.cart)
+
+	const removeItem = (ids) =>{
+		const removed = state.cart.splice(ids, 1)[0]
+
+		setState({
+			...state,
+			cart: state.cart
+		})
+
+		return removed
+	}
+
 	return {
 		state,
-		addToCart
+		addToCart,
+		removeItem
 	}
 }
 

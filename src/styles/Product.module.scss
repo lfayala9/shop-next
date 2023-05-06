@@ -29,8 +29,16 @@
 }
 
 .bag_icon:hover{
-    transition: 2.85s;
-    background-image: $--reverse-gradient;
+    background-image: $--darker-gradient;
+}
+
+.bag_icon2{
+    @extend .bag_icon;
+    background-image: $--darker-gradient;
+}
+
+.bag_icon2:hover{
+    background-image: $--pink-gradient;
 }
 
 .product_info div{

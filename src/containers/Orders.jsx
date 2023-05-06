@@ -6,7 +6,7 @@ import OrderItem from "@components/OrderItem";
 import AppContext from "@context/AppContext";
 import Link from "next/link";
 
-const Orders = ({ toggleOrders, setToggleOrders }) => {
+const Orders = ({ toggleOrders, setToggleOrders,}) => {
 
   const {state: {cart}} = useContext(AppContext)
 

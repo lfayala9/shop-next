@@ -11,6 +11,13 @@
   background-color: rgb(82, 82, 82);
   border-radius: 1rem;
 }
+
+.x_icon{
+  cursor: pointer;
+  margin-right: 0.3rem;
+  border-radius: 1rem;
+  background-color: rgb(20, 20, 20);
+}
 .cont_orderItem figure {
   margin: 0;
 }
@@ -27,4 +34,24 @@
 
 .cont_orderItem p:nth-child(3) {
     font-weight: bold;
+    color: black;
+}
+
+@media (max-width: 640px){
+  .cont_orderItem{
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
   }
+  .cont_orderItem figure img {
+    height: 5rem;
+    width: 5rem;
+  }
+  .cont_orderItem p:nth-child(2) {
+    display: none;
+  }
+  .cont_orderItem p:nth-child(3) {
+    color: rgb(41, 40, 40);
+    font-size: 1rem;
+  }
+}

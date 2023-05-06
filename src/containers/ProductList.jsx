@@ -12,7 +12,7 @@ function ProductList() {
 
   return (
     <>
-      <div className={style["products_cont"]}>
+      <div className={style["products_cont"]} id="products">
         <div className="main_cont d-flex flex-column align-items-center justify-content-center p-5">
           <h1 className="p-1 text-white h1">Browse some of our <br />Amazing <strong className={style["color_text3"]}>Products</strong></h1>
           <div className="d-flex row justify-content-center mt-4">

@@ -9,6 +9,10 @@ import pc from "@assets/icons/pc-display.svg"
 function Hero() {
   return (
     <div className="d-flex justify-content-end row m-0 mb-1">
+      <h1 className="py-4 ps-5 text-dark d-lg-none">
+          Get{" "}
+          <strong className={style["color_text"]}>Everything</strong> you need
+        </h1>
       <div className="col-12 col-lg-8 p-0 pe-1">
       <Image
         className="opacity-75"
