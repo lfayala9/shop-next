@@ -5,8 +5,8 @@ const Menu = () => {
         <div  className={style["Menu"]}>
           <ul className="p-0">
             <li>
-            <Link href="/sign-in">
-              <button className={style['primary-button']}>Sign In</button>
+            <Link href="/sign-up">
+              <button className={style['primary-button']}>Sign Up</button>
             </Link>
             </li>
             <hr className="text-white"/>

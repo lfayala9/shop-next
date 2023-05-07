@@ -1,6 +1,5 @@
 @import '__vars.scss';
 
-header{
     .nav-logo{
         cursor: pointer;
     }
@@ -58,7 +57,7 @@ header{
         // padding: 1rem;
     }
     
-}
+
 
 @media (max-width: 640px) {
     .nav-text{

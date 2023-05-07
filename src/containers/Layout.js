@@ -1,22 +1,17 @@
-import Header from "@components/Header";
-import Head from "next/head";
-import useInitialState from "@hooks/useInitialState";
-import AppContext from "@context/AppContext";
+import Header from '@components/Header';
+import Head from 'next/head';
 
 const Layout = ({ children, authPage = false }) => {
-    const initialState = useInitialState()
-    return(
+  return (
     <div>
-        <Head>
-            <title>Fake Shop</title>
-            <link rel="shortcut icon" href="/favicon.ico" />
-        </Head>
-        <AppContext.Provider value={initialState}>
-            {!authPage && <Header />}
-            {children}
-        </AppContext.Provider>
+      <Head>
+        <title>Fake Shop</title>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </Head>
+      {!authPage && <Header />}
+      {children}
     </div>
-    );
-  };
-  
-  export default Layout;
+  );
+};
+
+export default Layout;
