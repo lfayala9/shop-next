@@ -1,9 +1,10 @@
 import Layout from "@containers/Layout";
+import SignForm from "@containers/SignForm";
 
 const SignUp = () =>{
     return(
         <Layout authPage={true}>
-            <h1>Sign In</h1>
+            <SignForm />
         </Layout>
     )
 }

@@ -1,0 +1,34 @@
+@import '__vars';
+
+.log_form_cont {
+  @include form_container();
+  padding-bottom: 0;
+}
+
+.log_cont {
+  @include form();
+}
+
+.form_cont {
+  width: 90%;
+  padding: 2rem 3px 0rem 3px;
+}
+
+.log_input {
+  @include form_input();
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.log_input:focus {
+  transition: 0.4s;
+  background-color: rgb(150, 150, 150);
+  outline-color: #c850c0;
+  outline-style: groove;
+}
+.forgot{
+    color: #c850c0;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+}

@@ -1,0 +1,55 @@
+@import '__vars';
+
+.sign_cont {
+  @include form();
+}
+
+.sign_form_cont {
+  @include form_container();
+}
+.sign_inputs{
+  display: flex;
+  justify-content: center;
+}
+
+.form_cont{
+  width: 90%;
+  padding: 2rem 3px 0rem 3px;
+}
+.terms{
+  font-size: 10px;
+  margin-top: 9px;
+  margin-bottom: 4px;
+
+  .link{
+    color: #c850c0;
+  }
+}
+.name{
+  padding-bottom: 0.5rem;
+  padding-left: 0.2rem;
+}
+.input_cont1{
+  @include form_input();
+}
+
+.user_label{
+  padding-left: 0.4rem;
+}
+.input_cont1:focus{
+  transition: 0.4s;
+  background-color: rgb(150, 150, 150);
+  outline-color: #c850c0;
+  outline-style: groove;
+}
+.input_cont2{
+  @extend .input_cont1;
+  width: 100%;
+}
+.primary-button{
+  margin-top: 2rem;
+}
+.name_field{
+  display: flex;
+  margin-bottom: 1rem;
+}

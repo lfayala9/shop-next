@@ -1,7 +1,11 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
 *{
     overflow-x: hidden;
     font-family: 'IBM Plex Mono', monospace;
 }
+
+
 
 html{
     display: flex;
@@ -9,18 +13,14 @@ html{
     background-color: #130f40; 
     background-image: linear-gradient(315deg,#000000  0%, #060514 74%);}
 
-header{
-    background-color: #212529;
-    padding: 1rem 0rem 1rem 0rem;
-    max-height: 80px;
-    width: 100%;
-    position: fixed;
-    top: 0px;
-    z-index: 1090;
-} 
+/* header{
+   
+}  */
 body{
     position: relative;
 }
+
+
 
 @media (min-width: 2541px){
     html{

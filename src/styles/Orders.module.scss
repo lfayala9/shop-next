@@ -4,11 +4,7 @@
     @include dropdow();
     width: 23rem;
     max-height: 90vh;
-    position: fixed;
-    top: 5rem;
-    right: 3.5rem;
     padding-bottom: 1.5rem;
-    z-index: 1100;
     overflow-y: auto;
     animation: swipeLeft 0.2s linear;
 

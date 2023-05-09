@@ -1,21 +1,53 @@
-$--pink-gradient: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-$--reverse-gradient: linear-gradient(43deg, #FFCC70 0%, #C850C0 46%, #4158D0 100%);
+$--pink-gradient: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+$--reverse-gradient: linear-gradient(43deg, #ffcc70 0%, #c850c0 46%, #4158d0 100%);
 $--darker-gradient: linear-gradient(to right, #d82851, #ff4b2b);
 $--dark: #212529;
-@mixin dropdow{
+
+@mixin form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #130f40;
+  background-image: linear-gradient(315deg, #000000 0%, #060514 74%);
+}
+
+@mixin form_container{
+  background-color: $--dark ;
+  width: 360px;
+  color: white;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 1rem;
+  background: linear-gradient($--dark, $--dark) padding-box, $--reverse-gradient border-box;
+  border-radius: 1rem;
+  border: 2px solid transparent;
+  width: 33rem;
+}
+
+@mixin form_input{
+  background-color: rgb(85, 85, 85);
+  border: none;
+  width: 80%;
+  border-radius: 1rem;
+  padding: 0.6rem;
+  padding-left: 1rem;
+  transition: 0.4s;
+}
+
+@mixin dropdow {
   background-color: $--dark;
   height: auto;
   border: 1px solid white;
   border-radius: 1rem;
   padding: 1.3rem 1.3rem 0 1.3rem;
 }
-@mixin gradient{
+@mixin gradient {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-@mixin button{
+@mixin button {
   width: 100%;
   cursor: pointer;
   font-weight: bold;
@@ -26,10 +58,10 @@ $--dark: #212529;
 }
 .primary-button {
   background-image: $--pink-gradient;
-  @include button()
-  }
+  @include button();
+}
 
-.primary-button:hover{
+.primary-button:hover {
   transition: 0.85s;
   border: solid 13px;
   border-radius: 8px;
@@ -37,21 +69,20 @@ $--dark: #212529;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
 
-  }
-
-.color_text{
+.color_text {
   @include gradient();
   background-image: $--pink-gradient;
   font-weight: bold;
 }
 
-.color_text3{
+.color_text3 {
   @include gradient();
   background-image: $--pink-gradient;
 }
 
-.icon_menu{
+.icon_menu {
   margin: 0rem 2rem 0rem 2rem;
   width: 8rem;
   height: 8rem;
