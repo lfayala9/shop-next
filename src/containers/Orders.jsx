@@ -3,6 +3,7 @@ import Image from "next/image";
 import arrow from "@assets/icons/arrow-left-square.svg";
 import style from "@styles/Orders.module.scss"
 import OrderItem from "@components/OrderItem";
+import sumTotal from "../functions/sumTotal";
 import AppContext from "@context/AppContext";
 import Link from "next/link";
 
@@ -26,7 +27,7 @@ const Orders = ({ toggleOrders, setToggleOrders,}) => {
       <div className="order_section"></div>
       <div className={style["order_total"]}>
         <p className="me-auto mb-0">Total</p>
-        <p className="mb-0">$0</p>
+        <p className="mb-0">${sumTotal(cart)}</p>
       </div>
       <Link href="/checkout">
       <button className={style["primary-button"]}>Checkout</button>

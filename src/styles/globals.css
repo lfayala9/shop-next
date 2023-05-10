@@ -1,38 +1,40 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css');
 
-*{
-    overflow-x: hidden;
-    font-family: 'IBM Plex Mono', monospace;
+* {
+  overflow: scroll;
+  overflow-x: hidden;
+  font-family: 'IBM Plex Mono', monospace;
+  scrollbar-width: none; 
+}
+::-webkit-scrollbar {
+  width: 0;
 }
 
-
-
-html{
-    display: flex;
-    justify-content: center;
-    background-color: #130f40; 
-    background-image: linear-gradient(315deg,#000000  0%, #060514 74%);}
+html {
+  display: flex;
+  justify-content: center;
+  background-color: #130f40;
+  background-image: linear-gradient(315deg, #000000 0%, #060514 74%);
+}
 
 /* header{
    
 }  */
-body{
-    position: relative;
+body {
+  position: relative;
 }
 
-
-
-@media (min-width: 2541px){
-    html{
-        display: flex;
-        justify-content: center;
-    }
-    header{
-        width: 100%;
-        max-width: 1385px;
-    }
-    body{
-        width: 100%;
-        max-width: 1385px;
-    }
+@media (min-width: 2541px) {
+  html {
+    display: flex;
+    justify-content: center;
+  }
+  header {
+    width: 100%;
+    max-width: 1385px;
+  }
+  body {
+    width: 100%;
+    max-width: 1385px;
+  }
 }

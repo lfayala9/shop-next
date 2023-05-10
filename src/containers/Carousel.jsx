@@ -36,7 +36,7 @@ const Carousel = () => {
   ];
 
   return (
-    <section className="slideshow_main d-flex justify-content-end row mt-5 pt-4 mb-1">
+    <section className="slideshow_main d-flex justify-content-end row mt-5 pt-3 mb-1">
       <div style={{background: 'linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%)'}} className="col-lg-4 d-lg-flex d-none align-items-start flex-column">
         <h1 className="py-4 ps-5 text-white pt-5">
           <span className={style["car_text"]}>This is the{" "}

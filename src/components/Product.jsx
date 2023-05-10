@@ -26,7 +26,7 @@ const Product = ({product})=> {
       <div className="cont d-flex flex-column">
         <Image
           src={product.image}
-          width="250"
+          width="270"
           height={250}
           alt="laop"
           className={style["product_img"]}
