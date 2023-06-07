@@ -1,10 +1,10 @@
 import Image from "next/image";
 import style from "@styles/Carousel.module.scss";
-import shoes from "@assets/sample images/shoes2.jpg";
-import nintendo from "@assets/sample images/xbox3.jpg";
+import shoes from "@assets/sample_images/shoes2.jpg";
+import nintendo from "@assets/sample_images/xbox3.jpg";
 import x from "@assets/icons/x.svg"
-import coffee from "@assets/sample images/coffee2.jpg";
-import laptop from "@assets/sample images/laptop.jpg";
+import coffee from "@assets/sample_images/coffee2.jpg";
+import laptop from "@assets/sample_images/laptop.jpg";
 import globe1 from "@assets/icons/globe-americas.svg";
 import globe2 from "@assets/icons/truck.svg";
 import globe3 from "@assets/icons/globe-europe-africa.svg";
