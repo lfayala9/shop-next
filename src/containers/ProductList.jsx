@@ -8,9 +8,9 @@ import { ColorRing } from "react-loader-spinner";
 // const API = 'https://fakestoreapi.com/products?offset=20&limit=12';
 // const API = 'https://shop-nextback-production-2c17.up.railway.app/api/v1/products/'
 const apiUrl = process.env.NEXT_PUBLIC_API_URL
+const API = `${apiUrl}/api/v1/products`
 
 function ProductList() {
-  const API = `${apiUrl}/api/v1/products`
   const [loading, setIsLoading] = useState(false)
   const products = useGetProducts(API)
 
