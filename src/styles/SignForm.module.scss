@@ -7,49 +7,55 @@
 .sign_form_cont {
   @include form_container();
 }
-.sign_inputs{
+.sign_inputs {
   display: flex;
   justify-content: center;
 }
 
-.form_cont{
+.form_cont {
   width: 90%;
-  padding: 2rem 3px 0rem 3px;
+  padding: 1rem 3px 0rem 3px;
 }
-.terms{
+.terms {
   font-size: 10px;
   margin-top: 9px;
   margin-bottom: 4px;
 
-  .link{
+  .link {
     color: #c850c0;
   }
 }
-.name{
+.name {
   padding-bottom: 0.5rem;
   padding-left: 0.2rem;
 }
-.input_cont1{
+.input_cont1 {
   @include form_input();
 }
 
-.user_label{
+.user_label {
   padding-left: 0.4rem;
 }
-.input_cont1:focus{
+.input_cont1:focus {
   transition: 0.4s;
   background-color: rgb(150, 150, 150);
   outline-color: #c850c0;
   outline-style: groove;
 }
-.input_cont2{
+.input_cont2 {
   @extend .input_cont1;
   width: 100%;
 }
-.primary-button{
+.primary-button {
   margin-top: 2rem;
 }
-.name_field{
+.name_field {
   display: flex;
   margin-bottom: 1rem;
+}
+
+@media (min-width: 2530px) {
+  .sign_cont {
+    background-image: linear-gradient(315deg, #000000 0%, #060514 74%);
+  }
 }

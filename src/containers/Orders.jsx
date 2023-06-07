@@ -20,8 +20,8 @@ const Orders = ({ toggleOrders, setToggleOrders,}) => {
         </p>
       </div>
       <hr className="text-white mb-3 mt-0" />
-      {cart.map((product) => (
-        <OrderItem product={product} key={`orderItem-${product.id}`} />
+      {cart.map((product, ids) => (
+        <OrderItem ids={ids} product={product} key={`orderItem-${product.id}-${product.ids}`} />
         ))}
       {/* <OrderItem /> */}
       <div className="order_section"></div>

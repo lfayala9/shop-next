@@ -42,9 +42,9 @@ const SignForm = () => {
             <label for="pwd">Password:</label>
             <br />
             <input className={style['input_cont2']} placeholder="******" type="password" id="pwd" name="pwd" />
-            <label for="pwd">Repeat your Password:</label>
+            {/* <label for="pwd">Repeat your Password:</label>
             <br />
-            <input className={style['input_cont2']} placeholder="******" type="password" id="pwd" name="pwd" />
+            <input className={style['input_cont2']} placeholder="******" type="password" id="pwd" name="pwd" /> */}
             <button type="submit" className={style['primary-button']}>
               Sign Up
             </button>

@@ -5,6 +5,7 @@ import Hero from "../containers/Hero";
 import ProductList from "../containers/ProductList";
 import CheckOrders from "@containers/CheckOrders";
 import Parallax from "@containers/Parallax";
+import 'react-tooltip/dist/react-tooltip.css';
 
 const image1 = "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/empire-state-building-black-and-white-square-format-john-farnan.jpg"
 
@@ -14,7 +15,7 @@ const image2 = "https://media.istockphoto.com/id/1367140093/photo/blackn-white-n
 export default function Home() {
   return (
     <Layout>
-      <Carousel />
+      <Carousel/>
       <Parallax image={image1} text="Everything"/>
       <Hero />
       <Parallax image={image2} text="Everyone"/>

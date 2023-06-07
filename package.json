@@ -18,6 +18,7 @@
     "react-dom": "18.2.0",
     "react-loader-spinner": "^5.3.4",
     "react-parallax": "^3.5.1",
+    "react-tooltip": "^5.13.1",
     "sass": "^1.62.0"
   }
 }

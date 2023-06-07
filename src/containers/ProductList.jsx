@@ -5,9 +5,12 @@ import style from "@styles/ProductList.module.scss"
 import { ColorRing } from "react-loader-spinner";
 
 
-const API = 'https://fakestoreapi.com/products?offset=20&limit=12';
+// const API = 'https://fakestoreapi.com/products?offset=20&limit=12';
+// const API = 'https://shop-nextback-production-2c17.up.railway.app/api/v1/products/'
+const apiUrl = process.env.NEXT_PUBLIC_API_URL
 
 function ProductList() {
+  const API = `${apiUrl}/api/v1/products`
   const [loading, setIsLoading] = useState(false)
   const products = useGetProducts(API)
 
@@ -22,8 +25,9 @@ function ProductList() {
         <div className="main_cont d-flex flex-column align-items-center justify-content-center p-5">
           <h1 className="p-1 text-white h1">Browse some of our <br />Amazing <strong className={style["color_text3"]}>Products</strong></h1>
           <div className="d-flex row justify-content-center mt-4">
-            {loading ? products.map(product=> (
-              <Product loading={loading} product={product} key={product.id} />
+            {loading ? products.map(i=> (
+              <Product loading={loading} product={i} key={i.id} data-tooltip-id="tooltip"
+              data-tooltip-place="top"/>
             )) : <ColorRing
             visible={true}
             height="80"
