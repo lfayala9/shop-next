@@ -11,7 +11,7 @@ const Menu = () => {
             </li>
             <hr className="text-white"/>
             <li className="px-3">
-              <Link className="text-decoration-none text-white" href="/">Log In</Link>
+              <Link className="text-decoration-none text-white" href="/login">Log In</Link>
             </li>
           </ul>
         </div>
