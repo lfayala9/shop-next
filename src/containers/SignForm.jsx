@@ -1,9 +1,47 @@
 import style from '@styles/SignForm.module.scss';
-import twitter from '@assets/icons/twitter.svg';
-import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
+import Swal from 'sweetalert2';
+import useAuthService from '@hooks/useAuthService';
+
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const API = `${apiUrl}/api/v1/customer`;
 
 const SignForm = () => {
+  const { authService } = useAuthService();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [name, setName] = useState();
+  const [lastName, setLastName] = useState();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const response = await authService(API, {
+      user: {
+        email,
+        password,
+      },
+      name,
+      lastName,
+    });
+
+    if ('createdAt' in response) {
+      Swal.fire({
+        title: 'Account Created!',
+        timer: 2000,
+        icon: 'success',
+        showConfirmButton: false,
+      })
+    } else {
+      Swal.fire({
+        title: 'Failure',
+        text: response.message,
+        timer: 3000,
+        icon: 'error',
+        showConfirmButton: false,
+      });
+    }
+  };
   return (
     <div className={style['sign_cont']}>
       <div className={style['sign_form_cont']}>
@@ -14,40 +52,43 @@ const SignForm = () => {
         </div>
         <hr className="mb-0" />
         <div className={style['sign_inputs']}>
-          <form className={style['form_cont']}>
+          <form noValidate onSubmit={handleSubmit} className={style['form_cont']}>
             <div className={style['name_field']}>
               <div className={style['name']}>
-                <label className={style['user_label']} for="fname">
+                <label className={style['user_label']} htmlFor="fname">
                   First Name:
                 </label>
                 <br />
-                <input className={style['input_cont1']} placeholder="John" type="text" id="fname" name="fname" />
+                <input onChange={(e) => setName(e.target.value)} className={style['input_cont1']} placeholder="John" type="text" id="fname" name="fname" />
                 <br />
               </div>
               <div className={style['name']}>
-                <label className={style['user_label']} for="last-name">
+                <label className={style['user_label']} htmlFor="last-name">
                   Last Name:
                 </label>
                 <br />
-                <input className={style['input_cont1']} placeholder="Doe" type="text" id="last-name" name="last-name" />
+                <input onChange={(e) => setLastName(e.target.value)} className={style['input_cont1']} placeholder="Doe" type="text" id="last-name" name="last-name" />
                 <br />
               </div>
             </div>
             {/* s */}
             <hr />
-            <label for="email">E-mail:</label>
+            <label htmlFor="email">E-mail:</label>
             <br />
-            <input className={style['input_cont2']} type="email" id="email" name="email" placeholder="user@example.com" />
+            <input onChange={(e) => setEmail(e.target.value)} className={style['input_cont2']} type="email" id="email" name="email" placeholder="user@example.com" />
             <br />
-            <label for="pwd">Password:</label>
+            <label htmlFor="pwd">Password:</label>
             <br />
-            <input className={style['input_cont2']} placeholder="******" type="password" id="pwd" name="pwd" />
+            <input onChange={(e) => setPassword(e.target.value)} className={style['input_cont2']} placeholder="******" type="password" id="pwd" name="pwd" />
             {/* <label for="pwd">Repeat your Password:</label>
             <br />
             <input className={style['input_cont2']} placeholder="******" type="password" id="pwd" name="pwd" /> */}
             <button type="submit" className={style['primary-button']}>
               Sign Up
             </button>
+            <Link className="text-decoration-none" href={'/login'}>
+              <p className={style['forgot2']}>Already have an account? Log in here!</p>
+            </Link>
             <hr />
             <p>
               <strong>Or Sign Up Using: </strong>
@@ -57,10 +98,10 @@ const SignForm = () => {
                 <i className="bi-twitter" style={{ color: 'cornflowerblue', fontSize: '1.8rem' }}></i>
               </Link>
               <Link href={'/'}>
-                <i class="bi bi-google" style={{ color: '#EA4335', fontSize: '1.8rem', marginLeft: '4rem' }}></i>
+                <i className="bi bi-google" style={{ color: '#EA4335', fontSize: '1.8rem', marginLeft: '4rem' }}></i>
               </Link>
               <Link href={'/'}>
-                <i class="bi bi-facebook" style={{ color: '#4267B3', fontSize: '1.8rem', marginLeft: '4rem' }}></i>
+                <i className="bi bi-facebook" style={{ color: '#4267B3', fontSize: '1.8rem', marginLeft: '4rem' }}></i>
               </Link>
               <p className={style['terms']}>
                 By signing up for Fake Store, you agree to Fake Store{' '}

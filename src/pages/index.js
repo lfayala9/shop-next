@@ -6,6 +6,8 @@ import ProductList from "../containers/ProductList";
 import CheckOrders from "@containers/CheckOrders";
 import Parallax from "@containers/Parallax";
 import 'react-tooltip/dist/react-tooltip.css';
+import { useRouter } from 'next/router'
+import { useEffect } from "react";
 
 const image1 = "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/empire-state-building-black-and-white-square-format-john-farnan.jpg"
 
@@ -13,6 +15,25 @@ const image2 = "https://media.istockphoto.com/id/1367140093/photo/blackn-white-n
 
 
 export default function Home() {
+  // const router = useRouter()
+  // useEffect(()=>{
+  //   const token = localStorage.getItem('token')
+  //   if(token){
+  //     router.push('/login')
+  //   }else{
+  //     return (
+  //       <Layout>
+  //         <Carousel/>
+  //         <Parallax image={image1} text="Everything"/>
+  //         <Hero />
+  //         <Parallax image={image2} text="Everyone"/>
+    
+  //         <ProductList/>
+  //       </Layout>
+  //     );
+  //   }
+  // },[])
+
   return (
     <Layout>
       <Carousel/>

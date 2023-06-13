@@ -28,11 +28,15 @@
 }
 .forgot{
     color: #c850c0;
+    font-size: 0.8rem;
     font-weight: bold;
     margin-top: 1rem;
     margin-left: 0.5rem;
 }
-
+.forgot2{
+  @extend .forgot;
+  color:#b61948
+}
 @media (min-width: 2530px){
   .log_cont{
   background-image: linear-gradient(315deg, #000000 0%, #060514 74%);

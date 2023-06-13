@@ -2,7 +2,8 @@ import Image from 'next/image';
 import style from '@styles/Header.module.scss';
 import logo from '@assets/icons/basket-fill.svg';
 import menu from '@assets/icons/list.svg';
-import user from '@assets/icons/person-circle.svg';
+import userIcon from '@assets/icons/person-circle.svg';
+import person from '@assets/icons/person-fill-check.svg';
 import cart from '@assets/icons/cart-fill.svg';
 import Menu from './Menu';
 import AppContext from '@context/AppContext';
@@ -11,8 +12,15 @@ import { useState, useEffect, useRef, useContext } from 'react';
 
 const Header = () => {
   const [toggleOrders, setToggleOrders] = useState(false);
-
+  const [userPic, setUserPic] = useState(userIcon)
   const { state } = useContext(AppContext);
+
+  useEffect(()=>{
+    const token = localStorage.getItem('token')
+    if(token){
+      setUserPic(person)
+    }
+  },[])
 
   //? Function that hides navbar at scroll down and shows at scroll up
 
@@ -30,8 +38,8 @@ const Header = () => {
   };
 
   useEffect(() => {
+    
     window.addEventListener('scroll', handleScroll, { passive: true });
-
     return window.addEventListener('scroll', handleScroll);
   });
 
@@ -93,7 +101,7 @@ const Header = () => {
                   className="mx-1"
                   onClick={() => setToggle(!toggle)}
                   // type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                  src={user}
+                  src={userPic}
                   alt="user"
                   // dropdown-toggle
                 />
@@ -107,9 +115,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <div className={navVisible ? `${style['orders_display']}` : `${style['orders_move']}`}>
-      {toggleOrders && <Orders toggleOrders={toggleOrders} setToggleOrders={setToggleOrders} />}
-      </div>
+      <div className={navVisible ? `${style['orders_display']}` : `${style['orders_move']}`}>{toggleOrders && <Orders toggleOrders={toggleOrders} setToggleOrders={setToggleOrders} />}</div>
       <div ref={ref} className={navVisible ? `${style['menu_display']}` : `${style['menu_move']}`}>
         {toggle && <Menu />}
       </div>
