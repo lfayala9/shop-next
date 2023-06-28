@@ -2,7 +2,6 @@ import style from '@styles/Parallax.module.scss';
 import { Parallax, Background } from 'react-parallax';
 
 const ParallaxCont = ({image, text}) => {
-    // const image =   "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/empire-state-building-black-and-white-square-format-john-farnan.jpg";
   return (
     <Parallax
       bgImage={image}

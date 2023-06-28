@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import office from "@assets/sample_images/office.jpg";
+import office from "@assets/sample_images/office.webp";
 import style from "@styles/Hero.module.scss"
 import headset from "@assets/icons/headset.svg"
 import watch from "@assets/icons/watch.svg"

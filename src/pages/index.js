@@ -9,7 +9,7 @@ import 'react-tooltip/dist/react-tooltip.css';
 import { useRouter } from 'next/router'
 import { useEffect } from "react";
 
-const image1 = "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/empire-state-building-black-and-white-square-format-john-farnan.jpg"
+const image1 = "https://images.unsplash.com/photo-1608329997339-4278cee1d785?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJsYWNrJTIwYW5kJTIwd2hpdGUlMjBidWlsZGluZ3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
 
 const image2 = "https://media.istockphoto.com/id/1367140093/photo/blackn-white-night.jpg?s=612x612&w=0&k=20&c=8F9H0q5fz8JDtQg9XDwRxv-QpJa4SzBjh5FgZqIl9f0=";
 
