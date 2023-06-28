@@ -92,7 +92,7 @@ const Carousel = () => {
               src={shoes}
               className="d-block w-100 opacity-75 h-25"
               alt="Running Shoes"
-              style={{width: "100%", height: "67vh"}}
+              style={{width: "100%", height: "100%"}}
             />
             <div className="carousel-caption">
               <h4 className="text-dark fw-bold overflow-hidden">Running Shoes</h4>
@@ -110,7 +110,7 @@ const Carousel = () => {
                 src={slide.image}
                 className="d-block w-100 opacity-75 h-25"
                 alt={slide.title}
-                style={{width: "100%", height: "67vh"}}
+                style={{width: "100%", height: "100%"}}
 
               />
               <div className="carousel-caption">
@@ -126,36 +126,6 @@ const Carousel = () => {
               </div>
             </div>
           ))}
-          {/* <div className="carousel-item">
-            <Image
-              width="1000"
-              height="450"
-              src={shoes}
-              className="d-block w-100 opacity-75"
-              alt="..."
-            />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>
-                Some representative placeholder content for the second slide.
-              </p>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <Image
-              width="1000"
-              height="450"
-              src={shoes}
-              className="d-block w-100 opacity-75"
-              alt="..."
-            />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>
-                Some representative placeholder content for the third slide.
-              </p>
-            </div>
-          </div> */}
         </div>
         <button
           className="carousel-control-prev"
