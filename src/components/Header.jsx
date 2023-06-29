@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import style from '@styles/Header.module.scss';
 import logo from '@assets/icons/basket-fill.svg';
-import menu from '@assets/icons/list.svg';
 import userIcon from '@assets/icons/person-circle.svg';
 import person from '@assets/icons/person-fill-check.svg';
 import cart from '@assets/icons/cart-fill.svg';
