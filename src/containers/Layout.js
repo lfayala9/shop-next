@@ -7,6 +7,7 @@ const Layout = ({ children, authPage = false }) => {
     <div>
       <Head>
         <title>Fake Shop</title>
+        <meta name='description' content='this is a dummy store'/>
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       {!authPage && <Header />}

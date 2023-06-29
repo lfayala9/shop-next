@@ -1,13 +1,9 @@
-import styles from "@styles/Home.module.css";
 import Carousel from "../containers/Carousel";
 import Layout from "../containers/Layout";
 import Hero from "../containers/Hero";
 import ProductList from "../containers/ProductList";
-import CheckOrders from "@containers/CheckOrders";
 import Parallax from "@containers/Parallax";
 import 'react-tooltip/dist/react-tooltip.css';
-import { useRouter } from 'next/router'
-import { useEffect } from "react";
 
 const image1 = "https://images.unsplash.com/photo-1608329997339-4278cee1d785?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJsYWNrJTIwYW5kJTIwd2hpdGUlMjBidWlsZGluZ3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
 
