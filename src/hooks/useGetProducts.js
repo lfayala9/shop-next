@@ -10,7 +10,7 @@ const useGetProducts = (API) =>{
             .then((response)=> setProducts(response))
         };
         getProducts()
-    },[]);
+    });
 
     return products;
 }
